@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import React from 'react';
+import { wrapper } from '../redux';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function HRMApp({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
-export default MyApp
+export default wrapper.withRedux(HRMApp);
